@@ -1,0 +1,228 @@
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.5', '0.5']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.5 (batch_ratio) = 96
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.5', '0.5']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.5 (batch_ratio) = 96
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.5', '0.5']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.5 (batch_ratio) = 96
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.5', '0.5']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.5 (batch_ratio) = 96
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.8', '0.2']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.8 (batch_ratio) = 154
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root: data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 0
+num total samples of MJ: 0 x 1.0 (total_data_usage_ratio) = 0
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 59
+num total samples of MJ: 59 x 1.0 (total_data_usage_ratio) = 59
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 83
+num total samples of ST: 83 x 1.0 (total_data_usage_ratio) = 83
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 3
+sub-directory:	/MJ	 num samples: 6
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: ./data/training
+opt.select_data: ['MJ', 'ST']
+opt.batch_ratio: ['0.3', '0.7']
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: MJ
+sub-directory:	/MJ	 num samples: 365
+num total samples of MJ: 365 x 1.0 (total_data_usage_ratio) = 365
+num samples of MJ per batch: 192 x 0.3 (batch_ratio) = 58
+--------------------------------------------------------------------------------
+dataset_root:    ./data/training	 dataset: ST
+sub-directory:	/ST	 num samples: 365
+num total samples of ST: 365 x 1.0 (total_data_usage_ratio) = 365
+num samples of ST per batch: 192 x 0.7 (batch_ratio) = 134
+--------------------------------------------------------------------------------
+Total_batch_size: 58+134 = 192
+--------------------------------------------------------------------------------
+dataset_root:    ./data/validation	 dataset: /
+sub-directory:	/ST	 num samples: 21
+sub-directory:	/MJ	 num samples: 48
+--------------------------------------------------------------------------------

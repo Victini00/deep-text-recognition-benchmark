@@ -1,0 +1,13 @@
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+demo_image/demo_1.png    	available                	0.5610
+demo_image/demo_2.jpg    	shakeshack               	0.4788
+demo_image/demo_3.png    	londen                   	0.7947
+demo_image/demo_4.png    	greenstead               	0.9409
+demo_image/demo_5.png    	toast                    	0.7408
+demo_image/demo_6.png    	merrt                    	0.4749
+demo_image/demo_7.png    	underground              	0.6128
+demo_image/demo_8.jpg    	honaldo                  	0.2766
+demo_image/demo_9.jpg    	balay                    	0.0753
+demo_image/demo_10.jpg   	university               	0.5594
