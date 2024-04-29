@@ -1,16 +1,4 @@
-**/saved_models/*
-**/data_lmdb_release/*
-**/image_release/*
-**/result/*
-*.mdb
-*.pth
-*.tar
-*.sh
-*.txt
-*.ipynb
-*.zip
-*.eps
-*.pdf
+
 
 ### Linux ###
 *~
