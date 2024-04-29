@@ -28,6 +28,11 @@ def train(opt):
 
     opt.select_data = opt.select_data.split('-')
     opt.batch_ratio = opt.batch_ratio.split('-')
+    print("신영1")
+    print(opt.train_data)
+    print("신영2")
+    print(opt.valid_data)
+    print("신영3")
     train_dataset = Batch_Balanced_Dataset(opt)
 
     log = open(f'./saved_models/{opt.exp_name}/log_dataset.txt', 'a')
@@ -256,9 +261,18 @@ if __name__ == '__main__':
     parser.add_argument('--imgH', type=int, default=32, help='the height of the input image')
     parser.add_argument('--imgW', type=int, default=100, help='the width of the input image')
     parser.add_argument('--rgb', action='store_true', help='use rgb input')
+    
+    
+    #parser.add_argument('--character', type=str,
+    #                    default='0123456789abcdefghijklmnopqrstuvwxyz', help='character label')
+    # edit 0921 character 수정 - ds 10/17 ver
+    #parser.add_argument('--sensitive', action='store_true', help='for sensitive character mode')
     parser.add_argument('--character', type=str,
-                        default='0123456789abcdefghijklmnopqrstuvwxyz', help='character label')
-    parser.add_argument('--sensitive', action='store_true', help='for sensitive character mode')
+                        default=" ☎®©™₩℃△!\"\'#$%&()*+,-.·°/0123456789¹²³:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~×÷※←↑→↓↔①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮ⓐⓑⓒⓓⓔⓖⓗⓘⓙⓚⓛⓜⓝ▷《》『』ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅣ㎡㎢㎥가각간갇갈감갑값갓갔강갖같갚갛개객갠갤갬갯갱걀거걱건걷걸검겁것겅겆겉겊게겐겔겟겠겨격겪견결겸겹겼경곁계고곡곤곧골곰곱곳공곶과곽관괄광괘괜괭괴괸굉교굣구국군굳굴굵굶굼굽굿궁궂궈권궐궤귀귄귓규균귤그극근글긁금급긋긍긔기긴길김깁깃깅깊까깍깎깐깔깜깝깡깥깨깬깻깽꺼꺾껄껍껏껑께껴꼐꼬꼭꼴꼼꼽꼿꽁꽂꽃꽆꽈꽉꽝꽤꽥꽹꾀꾸꾹꾼꿀꿈꿋꿍꿔꿩꿰뀌뀔뀝끄끈끊끌끓끔끗끝끼끽낀낄낌나낙낚난날낡남납낫났낭낮낯낱낳내낵낸낼냄냅냇냈냉냐냠냥너넉넋넌널넓넘넙넛넝넣네넥넨넬넷녀녁년념녔녕녘노녹논놀놈놋농높놓놔뇌뇨뇽누눅눈눌눔눕눗눙눠뉘뉴늄느늑는늘늙늠능늦늪늬늴니닉닌닐님닙닛닝닢다닥닦단닫달닭닮담답닷당닻닿대댁댄댐댓댕더덕덖던덜덟덤덥덧덩덮데덱덴델뎀뎁뎃뎅뎌뎐도독돈돋돌돔돕돗동돛돝돼됐되된될됨됩두둑둔둘둟둠둡둣둥뒤뒷뒹듀듈드득든듣들듦듬듭듯등듸디딕딘딛딜딤딥딧딨딩딪따딱딴딸땀땅때땐땜땟땠땡떄떠떡떤떨떰떳떴떵떻떼떽뗄뗏또똑똘똥뙈뚜뚝뚫뚱뛰뛸뜀뜨뜩뜬뜯뜰뜸뜻띄띠띵라락란랄람랍랏랐랑랗래랙랜랠램랩랫랬랭랴략랸량러럭런럴럼럽럿렀렁렇레렉렌렐렘렙렛려력련렬렴렵렸령례로록론롤롬롭롯롱뢰료룡루룩룬룰룸룹룻룽뤄뤘뤼륌류륙륜률륨륫륭르륵른를름릅릇릉릎릐릔리릭린릴림립릿링마막만많맏말맑맘맙맛망맞맡맣매맥맨맬맴맵맷맹맺먀먄머먹먼멀멈멋멍멎메멕멘멜멤멥멧멩며멱면멸명몇모목몬몰몸몹못몽뫼묘묫무묵묶문묻물뭄뭇뭉뭐뭔뭘뭣뮈뮤뮨뮬뮴므믈미믹민믿밀밈밉밋밌밍및밑바박밖반받발밝밟밤밥밧방밭배백밴밸뱀뱃뱅뱉뱡버벅번벌범법벗벙벚베벡벤벧벨벰벳벵벼벽변별볍볏병볕보복볶본볼봄봅봇봉봐봔봤봥뵈뵙부북분불붉붐붓붕붙뷔뷘뷰뷸브븐블비빅빈빌빔빗빙빚빛빠빡빨빳빴빵빼빽뺄뺏뺑뺨뻐뻑뻔뻗뻘뻤뻥뻬뼈뼉뼘뽀뽐뽑뽕뽜뾰뿅뿌뿍뿐뿔뿜뿡쁘쁜쁠쁨삐삑삔삘사삭산살삶삼삽삿상새색샌샐샘샛생샤샨샬샴샵샷샹샾서석섞선섣설섦섬섭섯성섶세섹센셀셈셉셋셔션셜셨셩셰소속손솔솜솝솟송솥쇄쇠쇳쇼숀숄숍숏숑수숙순숟술숨숫숭숯숱숲쉐쉘쉬쉰쉴쉼쉽쉿슈슉슐슘슛슝스슨슬슴습슷승시식신싣실싫심십싯싱싶싸싹싼쌀쌈쌉쌌쌍쌓쌤쌩써썩썬썰썸썹썽쎄쎌쏘쏙쏜쏟쏠쏨쏭쏴쑈쑝쑤쑥쓰쓱쓴쓸씀씁씌씨씩씬씰씹씻씽아악안앉않알앓암압앗았앙앞애액앤앨앰앱앳앵야약얀얄얇얉얌얏양얕얗얘어억언얹얻얼얽엄업없엇었엉엌엎에엑엔엘엠엡엣엥여역엮연열엷염엽엾엿였영옆예옐옙옛오옥온올옮옳옴옵옷옹옻와왁완왈왑왓왔왕왜왠외왼요욕욘욜욤용우욱운울움웁웃웅워웍원월웜웠웨웬웰웹웻위윅윈윌윔윗윙유육윤율윰윱융윷으윽은을읆음읍응의이익인읻일읽잃임입잇있잉잊잌잎자작잔잖잘잠잡잣장잦재잭잼잽잿쟁쟈쟝쟤저적전절젊점접젓정젖제젝젠젤젬젯져젼졌졍조족존졸좀좁종좇좋좌죄죠주죽준줄줌줍줏중줘쥐쥔쥘쥬쥴즈즉즌즐즘즙증지직진짇질짊짐집짓징짖짙짚짜짝짠짤짧짬짭짱째쨈쨌쨍쩌쩍쩐쩜쪼쪽쫀쫄쫑쫓쭈쭉쯔쯤찌찍찐찔찜찡찢차착찬찮찰참찹찻창찾채책챈챌챔챕챗챙챠챤챵처척천철첨첩첫청체첵첸첼쳄쳐쳤초촉촌촘촛총촨촬최쵸추축춘출춤춥춧충춰췌취츄츠측츨츰층치칙친칠칡침칩칫칭카칵칸칼캄캇캉캐캔캘캠캡캣캥커컨컫컬컴컵컷케켄켈켐켓켜켠켤켰코콕콘콜콤콥콧콩콰콴콸쾅쾌쾰쿄쿠쿡쿤쿨쿰쿱쿵쿼퀀퀄퀘퀴퀵퀸퀼큉큐큘크큰클큼킁키킥킨킬킴킵킷킹타탁탄탈탉탐탑탓탕태택탠탤탬탭탱터턱턴털텀텁텃텅테텍텐텔템텝텟톈토톡톤톨톰톱톳통톺퇴툇투툭툰툴툼퉁튀튈튜튠튤튬트특튼튿틀틈틔티틱틴틸팀팁팅파팍팎판팔팜팝팟팡팥패팩팬팰팸팹팽퍼퍽펀펄펌펍펑페펙펜펠펩펫펭펴편펼평폐포폭폰폴폼폿퐁표푸푹푼풀품풋풍퓨퓰프픈플픔피픽핀필핏핑하학한할함합핫항해핵핸핼햄햅햇했행향허헉헌헐험헛헝헤헥헨헬헴혀혁현혈혐협혔형혜호혹혼홀홈홉홍홓화확환활황횃회획횟횡효후훈훌훔훗훠훤훨훼휀휘휙휠휴흉흐흑흔흘흙흠흡흥흩희흰히힉힌힐힘힙갸궨꺽껸꿉넹녜놉뉜댑댚됫둬뗀뚠띤렝뤽륄맇먕몫뫄뭍뭎뮌뮐뮷믄믐뱁붇빕뽄뽈쁩샀섀섰셸솎슌쌋쑨쑴앎얍옌젭쩔쫌춸츈캅캬켙튄틍팻퓸핌핍햐홰휩힝갗겜겡곗괌귁귐귕긘긱깟깸깹꺄껌껜껫꼈꼰꾕꿨뀐끕낍냔넵놂놨뇬닑닳댱덫덯뎠돠됭됴뒀듄듐듕땄뗐똇똔뚤뜹띨렷륀몄묏뭅믜밷벋벝볐볾뵤븸빤뺀뼛삵샅샥셍솅솦쇤숴쉑쉔슥슭썼쎈쏄쏩쐬쑦쓩옅옭왐웩윩읊잰젋졩죤쨋쨰쪄쫙쬐쬬찼찿첯쳇촐촤췄컥컸쾨큽탯텨툽튐튕틋퍄폄폈퐈풂퓌핥햬헷홑훅훙휄힛", help='character label')   
+    # 대소문자 구분 옵션의 디폴트값을 True로 하기 위해 변형
+    parser.add_argument('--sensitive', action='store_true', help='for sensitive character mode', default=True)
+        
+
     parser.add_argument('--PAD', action='store_true', help='whether to keep ratio then pad for image resize')
     parser.add_argument('--data_filtering_off', action='store_true', help='for data_filtering_off mode')
     """ Model Architecture """
@@ -284,9 +298,9 @@ if __name__ == '__main__':
     os.makedirs(f'./saved_models/{opt.exp_name}', exist_ok=True)
 
     """ vocab / character number configuration """
-    if opt.sensitive:
+    # if opt.sensitive:
         # opt.character += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        opt.character = string.printable[:-6]  # same with ASTER setting (use 94 char).
+        # opt.character = string.printable[:-6]  # same with ASTER setting (use 94 char).
 
     """ Seed and GPU setting """
     # print("Random Seed: ", opt.manualSeed)
