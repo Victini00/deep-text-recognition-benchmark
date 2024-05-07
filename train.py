@@ -4,6 +4,8 @@ import time
 import random
 import string
 import argparse
+import f1_score as f1_score
+
 
 import torch
 import torch.backends.cudnn as cudnn
@@ -21,25 +23,27 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def train(opt):
     """ dataset preparation """
-    if not opt.data_filtering_off:
+    if not opt.data_filtering_off: 
         print('Filtering the images containing characters which are not in opt.character')
         print('Filtering the images whose label is longer than opt.batch_max_length')
         # see https://github.com/clovaai/deep-text-recognition-benchmark/blob/6593928855fb7abb999a99f428b3e4477d4ae356/dataset.py#L130
 
     opt.select_data = opt.select_data.split('-')
     opt.batch_ratio = opt.batch_ratio.split('-')
+    '''
     print("신영1")
     print(opt.train_data)
     print("신영2")
     print(opt.valid_data)
     print("신영3")
+    '''
     train_dataset = Batch_Balanced_Dataset(opt)
 
     log = open(f'./saved_models/{opt.exp_name}/log_dataset.txt', 'a')
     AlignCollate_valid = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD)
     valid_dataset, valid_dataset_log = hierarchical_dataset(root=opt.valid_data, opt=opt)
     valid_loader = torch.utils.data.DataLoader(
-        valid_dataset, batch_size=opt.batch_size,
+    	 valid_dataset, batch_size=opt.batch_size,
         shuffle=True,  # 'True' to check training progress with validation function.
         num_workers=int(opt.workers),
         collate_fn=AlignCollate_valid, pin_memory=True)
@@ -207,19 +211,20 @@ def train(opt):
                 log.write(loss_model_log + '\n')
 
                 # show some predicted results
-                dashed_line = '-' * 80
-                head = f'{"Ground Truth":25s} | {"Prediction":25s} | Confidence Score & T/F'
+                dashed_line = '-' * 160
+                head = f'{"Ground Truth":40s} | {"Prediction":40s} | {"Confidence Score":20s} | {"T/F":10s} | f1_score'
                 predicted_result_log = f'{dashed_line}\n{head}\n{dashed_line}\n'
                 for gt, pred, confidence in zip(labels[:5], preds[:5], confidence_score[:5]):
                     if 'Attn' in opt.Prediction:
                         gt = gt[:gt.find('[s]')]
                         pred = pred[:pred.find('[s]')]
 
-                    predicted_result_log += f'{gt:25s} | {pred:25s} | {confidence:0.4f}\t{str(pred == gt)}\n'
+                    f1score = f1_score.calc_f1_score(gt, pred)
+                    predicted_result_log += f'{gt:40s} | {pred:40s} | {confidence:0.4f} | {str(pred == gt):10s}| {f1score:.4f}\n'
                 predicted_result_log += f'{dashed_line}'
                 print(predicted_result_log)
                 log.write(predicted_result_log + '\n')
-
+                
         # save model per 1e+5 iter.
         if (iteration + 1) % 1e+5 == 0:
             torch.save(
